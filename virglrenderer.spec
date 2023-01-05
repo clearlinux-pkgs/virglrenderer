@@ -4,7 +4,7 @@
 #
 Name     : virglrenderer
 Version  : 0.10.4
-Release  : 4
+Release  : 5
 URL      : https://gitlab.freedesktop.org/virgl/virglrenderer/-/archive/0.10.4/virglrenderer-0.10.4.tar.gz
 Source0  : https://gitlab.freedesktop.org/virgl/virglrenderer/-/archive/0.10.4/virglrenderer-0.10.4.tar.gz
 Summary  : No detailed summary available
