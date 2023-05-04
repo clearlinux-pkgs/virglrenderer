@@ -1,4 +1,5 @@
 0.10.4
 libepoxy-dev
 pkgconfig(epoxy)
+pkgconfig(gbm)
 pkgconfig(libdrm)
