@@ -5,7 +5,7 @@
 #
 Name     : virglrenderer
 Version  : 0.10.4
-Release  : 6
+Release  : 7
 URL      : https://gitlab.freedesktop.org/virgl/virglrenderer/-/archive/0.10.4/virglrenderer-0.10.4.tar.gz
 Source0  : https://gitlab.freedesktop.org/virgl/virglrenderer/-/archive/0.10.4/virglrenderer-0.10.4.tar.gz
 Summary  : No detailed summary available
@@ -77,7 +77,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683236514
+export SOURCE_DATE_EPOCH=1685491187
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -115,14 +115,12 @@ DESTDIR=%{buildroot} ninja -C builddir install
 
 %files dev
 %defattr(-,root,root,-)
-/V3/usr/lib64/libvirglrenderer.so
 /usr/include/virgl/virglrenderer.h
 /usr/lib64/libvirglrenderer.so
 /usr/lib64/pkgconfig/virglrenderer.pc
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/libvirglrenderer.so.1
 /V3/usr/lib64/libvirglrenderer.so.1.7.7
 /usr/lib64/libvirglrenderer.so.1
 /usr/lib64/libvirglrenderer.so.1.7.7
