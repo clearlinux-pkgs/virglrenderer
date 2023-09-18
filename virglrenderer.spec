@@ -4,10 +4,10 @@
 # Using build pattern: meson
 #
 Name     : virglrenderer
-Version  : 0.10.4
-Release  : 7
-URL      : https://gitlab.freedesktop.org/virgl/virglrenderer/-/archive/0.10.4/virglrenderer-0.10.4.tar.gz
-Source0  : https://gitlab.freedesktop.org/virgl/virglrenderer/-/archive/0.10.4/virglrenderer-0.10.4.tar.gz
+Version  : 1.0.0
+Release  : 8
+URL      : https://gitlab.freedesktop.org/virgl/virglrenderer/-/archive/virglrenderer-1.0.0/virglrenderer-virglrenderer-1.0.0.tar.gz
+Source0  : https://gitlab.freedesktop.org/virgl/virglrenderer/-/archive/virglrenderer-1.0.0/virglrenderer-virglrenderer-1.0.0.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
@@ -66,10 +66,10 @@ license components for the virglrenderer package.
 
 
 %prep
-%setup -q -n virglrenderer-0.10.4
-cd %{_builddir}/virglrenderer-0.10.4
+%setup -q -n virglrenderer-virglrenderer-1.0.0
+cd %{_builddir}/virglrenderer-virglrenderer-1.0.0
 pushd ..
-cp -a virglrenderer-0.10.4 buildavx2
+cp -a virglrenderer-virglrenderer-1.0.0 buildavx2
 popd
 
 %build
@@ -77,7 +77,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1685491187
+export SOURCE_DATE_EPOCH=1695069159
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -100,7 +100,7 @@ meson test -C builddir --print-errorlogs
 
 %install
 mkdir -p %{buildroot}/usr/share/package-licenses/virglrenderer
-cp %{_builddir}/virglrenderer-%{version}/COPYING %{buildroot}/usr/share/package-licenses/virglrenderer/a4924561121fd43cb97468ba0ecce6571b664b29 || :
+cp %{_builddir}/virglrenderer-virglrenderer-%{version}/COPYING %{buildroot}/usr/share/package-licenses/virglrenderer/a4924561121fd43cb97468ba0ecce6571b664b29 || :
 DESTDIR=%{buildroot}-v3 ninja -C builddiravx2 install
 DESTDIR=%{buildroot} ninja -C builddir install
 /usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
@@ -121,9 +121,9 @@ DESTDIR=%{buildroot} ninja -C builddir install
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/libvirglrenderer.so.1.7.7
+/V3/usr/lib64/libvirglrenderer.so.1.8.8
 /usr/lib64/libvirglrenderer.so.1
-/usr/lib64/libvirglrenderer.so.1.7.7
+/usr/lib64/libvirglrenderer.so.1.8.8
 
 %files license
 %defattr(0644,root,root,0755)
