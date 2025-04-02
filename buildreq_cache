@@ -1,6 +1,7 @@
-1.1.0
+1.1.1
 libepoxy-dev
 pkgconfig(epoxy)
 pkgconfig(gbm)
 pkgconfig(libdrm)
 pkgconfig(libdrm_amdgpu)
+pypi(yaml)
